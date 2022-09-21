@@ -2,22 +2,21 @@ import React, {useState} from "react";
 
 
 function Counter(){
-    // const [count, setCount] = useState(0);
-    // const [name, setName] = useState("Gender Bender");
-    // const [qual, setQual] = useState("CSS");
 
     //array deconstructor
     const [count, setCount]= useState(0);
-    const handleAdd = () => {setCount(count +1)};
-    const handleSub = () => {setCount(count -1)};
+
+    //handles event listeners
+    const Add = () => setCount(count +10);
+    const Sub = () => setCount(count -1);
 
 
     return (
         <div>
           <span>Current Count: {count}</span>
           <section>
-            <button onClick={handleAdd}>+</button>
-            <button onClick={handleSub}>-</button>
+            <button onClick={Add}>+</button>
+            <button onClick={Sub}>-</button>
           </section>
         </div>
       );
